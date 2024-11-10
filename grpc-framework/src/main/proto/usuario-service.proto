@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.exemplo.grpc";
+
+package com.exemplo.grpc;
+
+
+
+service UsuarioService{
+  //metodos
+  rpc create(UsuarioReq) returns (UsuarioRes){}
+  rpc getAll(EmptyReq) returns (UsuarioResList){}
+  rpc getAllServerStream(EmptyReq) returns (stream UsuarioRes){}
+}
+
+message EmptyReq{}
+
+message UsuarioReq{
+  string name = 1;
+  string email=2;
+}
+message UsuarioRes{
+  int64 id = 1;
+  string name = 2;
+  string email=3;
+}
+
+//criara lista de usuarios
+message UsuarioResList{
+repeated UsuarioRes usuarios = 1;
+}
