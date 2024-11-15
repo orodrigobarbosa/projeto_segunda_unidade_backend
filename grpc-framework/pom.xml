@@ -6,7 +6,6 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.5</version>
         <relativePath/>
-        <!--  lookup parent from repository  -->
     </parent>
     <groupId>com.projeto-grpc-framework</groupId>
     <artifactId>grpc-framework</artifactId>
@@ -17,7 +16,7 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
-        <!--  Dependências do Spring Boot  -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -62,26 +61,24 @@
             <groupId>io.grpc</groupId>
             <artifactId>grpc-stub</artifactId>
             <version>1.63.0</version>
-            <!--  versão mais compatível  -->
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
             <version>1.63.0</version>
-            <!--  versão mais compatível  -->
         </dependency>
-        <!--  Dependência para Jakarta Annotation (caso necessário para @Generated)  -->
+
         <dependency>
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
             <version>2.0.0</version>
-            <!--  versão mais recente  -->
+
         </dependency>
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
             <version>1.2</version>
-            <!--  versão mais recente do javax.annotation  -->
+
             <scope>provided</scope>
         </dependency>
     </dependencies>

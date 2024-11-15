@@ -6,7 +6,7 @@ option java_package = "com.exemplo.grpc";
 package com.exemplo.grpc;
 
 
-
+//O ARQUIVO QUE SERÁ GERADO A PARTIR DESTE, SERA EXTENDIDO NA CLASSE CONTROLLER TORNANDO POSSÍVEL A UTILIZAÇÃO DOS MÉTODOS ABAIXO
 service UsuarioService{
   //metodos
   rpc create(UsuarioReq) returns (UsuarioRes){}
@@ -16,17 +16,18 @@ service UsuarioService{
 
 message EmptyReq{}
 
+//request
 message UsuarioReq{
   string name = 1;
   string email=2;
 }
+//response
 message UsuarioRes{
   int64 id = 1;
   string name = 2;
   string email=3;
 }
-
-//criara lista de usuarios
+//criará lista de usuarios
 message UsuarioResList{
 repeated UsuarioRes usuarios = 1;
 }
